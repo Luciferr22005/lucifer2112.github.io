@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <title>Bezpieczenstwo</title>
+</head>
+<body>
+    <div>
+    <header class="Up">
+        
+    </header>
+    <input type="text" class="search-bar" placeholder="Pole do wyszukiwania">
+    </div>
+    <div>
+        <header class="logo">
+            <img src="logo_t.jpg" width="50px" height="50px" width="50px">
+        </header>
+    </div>
+    <div>
+        <header class="help">
+            <h6 class="mail">Potrzebujesz pomocy?<br>Napisz do nas<br>Mail:<a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=new">mail@gmail.com</a></h6>
+        </header>
+    </div>
+    <div class="menu">
+        <input type="checkbox" id="burger-checkbox" class="burger-checkbox">
+        <label for="burger-checkbox" class="burger"></label>
+        <ul class="menu-list">
+            <li><a href="strona_glowna.html" class="menu-item">Strona glowna</a><li>
+            <li><a href="podstawy_bez.html" class="menu-item">Podstawy bezpieczenstwa</a><li>
+            <li><a href="zbior_art.html" class="menu-item">Rozne artykoly</a><li>
+            <li><a href="rodzaje_osz.html" class="menu-item">Rodzaje oszustw</a><li>
+            <li><a href="https://www.instagram.com/"><img class="insta" src="inst1.png" width="50px" height="50px" width="50px"></a></li>
+            <li><a href="https://www.tiktok.com/explore"><img class="tiktok" src="tiktok.png" width="50px" height="50px" width="50px"></a></li>
+            <li><a href="https://pl-pl.facebook.com/"><img calss="face" src="facebook.png" width="50px" height="50px" width="50px"></a></li>
+        </ul>
+    </div><br><br>
+    <div class="gallery">
+        <header class="gallery1">
+        <img src="bezp.jpg" alt="Obrazek 1" class="active">
+        <img src="oszust.png" alt="Obrazek 2">
+        <img src="app.png" alt="Obrazek 3">
+        </header>
+    </div>
+    <div class="controls">
+        <button class="but1" onclick="prevImage()"><img class="but11" src="strzalkawl.png"></button>
+        <button class="but2" onclick="nextImage()"><img class="but22"src="strzalkapr.png"></button>
+    </div>
+    <script>
+        let currentImageIndex = 0;
+        const images = document.querySelectorAll('.gallery img');
+
+        function showImage(index) {
+            images.forEach((img, i) => {
+                img.classList.toggle('active', i === index);
+            });
+        }
+
+        function prevImage() {
+            currentImageIndex = (currentImageIndex > 0) ? currentImageIndex - 1 : images.length - 1;
+            showImage(currentImageIndex);
+        }
+
+        function nextImage() {
+            currentImageIndex = (currentImageIndex < images.length - 1) ? currentImageIndex + 1 : 0;
+            showImage(currentImageIndex);
+        }
+        
+    </script>
+    <div>
+    <footer class="down"> </footer>
+    </div>
+    <div>
+        <footer class="kto-co">
+            <h6 class="kto">Artem.K Crzesiek.G<br>Dawid.K<br>Zuzanna.K</h6>
+        </footer>
+    </div>
+    <div class="tresc">
+        <h2>Ta strona zostala stworzona dla pokazania jak mozna sie chronic przed oszukiwanie i kradzieza w internecie <br>
+        bardziej jest adresowana dla starszego pokolenia</h2>
+    </div>
+</body>
+</html>
